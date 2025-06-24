@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Data Processing Agreement  - VGDS{% endblock %}
+
+{% block content %}
+
+<!--Home Navbar  -->
+
+<nav class="navbar navbar-expand-lg fixed-top transparent d-none d-lg-flex">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+        <!-- White logo (default) -->
+        <img src="{% static 'images/vgds-white-logo.png' %}" alt="Bootstrap" class="logo logo-white" id="navbarLogo">
+
+        <!-- Colored logo (hidden initially) -->
+        <img src="{% static 'images/vgds-logo-2.png' %}" class="logo logo-colored d-none" alt="Logo">
+    </a>
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'projectapp:ourWorks' %}">Our Work</a>
+        </li>
+        <li class="nav-item dropdown custom-dropdown">
+          <a class="nav-link dropdown-toggle" href="{% url 'projectapp:services' %}">Services</a>
+            <div class="dropdown-menu mega-dropdown">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="{% url 'projectapp:presentation_design' %}" class="dropdown-card">
+                      <img src="{% static 'images/sol1.jpg' %}" class="img-fluid" alt="Presentation Design">
+                      <p class="dropdown-title">Presentation Design</p>
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="{% url 'projectapp:graphics' %}" class="dropdown-card">
+                      <img src="{% static 'images/sol2.jpg' %}" class="img-fluid" alt="Graphics & Print Design">
+                      <p class="dropdown-title">Graphics & Print Design</p>
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="{% url 'projectapp:otherServices' %}" class="dropdown-card">
+                      <img src="{% static 'images/sol3.jpg' %}" class="img-fluid" alt="Other Services">
+                      <p class="dropdown-title">Other Services</p>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'projectapp:solutions' %}">Solutions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'projectapp:testimonials' %}">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'projectapp:pricing' %}">Pricing</a>
+        </li>
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="#">About Us</a>-->
+<!--                </li>-->
+      </ul>
+
+        <!-- Mobile Order Now button -->
+      <div class="d-lg-none mt-3">
+        <a href="{% url 'projectapp:orderFlow' %}" type="button" class="btn order-button-nav">Order Now</a>
+      </div>
+
+    </div>
+
+    <!-- Order Now Button -->
+    <div class="d-none d-lg-block">
+<!--                <a href="#" type="button" class="btn order-button-nav" data-bs-toggle="modal" data-bs-target="#orderModalTreatment">Order Now</a>-->
+      <a href="{% url 'projectapp:orderFlow' %}" type="button" class="btn order-button-nav" >Order Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile/Tablet Offcanvas Navbar (visible < lg) -->
+<nav class="navbar fixed-top d-lg-none white-bg">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'images/vgds-white-logo.png' %}" class="logo logo-white d-none" alt="Logo">
+      <img src="{% static 'images/vgds-logo-2.png' %}" class="logo logo-colored" alt="Logo">
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a class="navbar-brand" href="/">
+        <!-- Colored logo (hidden initially) -->
+        <img src="{% static 'images/vgds-logo-2.png' %}" class="logo" alt="Logo">
+    </a>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link offcanvas-item" href="{% url 'projectapp:ourWorks' %}">Our Work</a></li>
+      <li class="nav-item">
+        <a class="nav-link offcanvas-item" data-bs-toggle="collapse" href="#offcanvasServices" role="button" aria-expanded="false" aria-controls="offcanvasServices">
+          Services
+        </a>
+        <div class="collapse ps-3" id="offcanvasServices">
+          <ul class="list-unstyled">
+            <li><a href="{% url 'projectapp:services' %}" class="nav-link offcanvas-item">Services</a></li>
+            <li>
+                <a href="{% url 'projectapp:presentation_design' %}" class="off-card mt-1">
+                  <img src="{% static 'images/sol1.jpg' %}" class="img-fluid" alt="Presentation Design">
+                  <p class="dropdown-title offcanvas-item">Presentation Design</p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'projectapp:graphics' %}" class="off-card mt-1">
+                  <img src="{% static 'images/sol2.jpg' %}" class="img-fluid" alt="Graphics & Print Design">
+                  <p class="dropdown-title offcanvas-item">Graphics & Print Design</p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'projectapp:otherServices' %}" class="off-card mt-1">
+                  <img src="{% static 'images/sol3.jpg' %}" class="img-fluid" alt="Other Services">
+                  <p class="dropdown-title offcanvas-item">Other Services</p>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link offcanvas-item" href="{% url 'projectapp:solutions' %}">Solutions</a></li>
+      <li class="nav-item"><a class="nav-link offcanvas-item" href="{% url 'projectapp:testimonials' %}">Testimonials</a></li>
+      <li class="nav-item"><a class="nav-link offcanvas-item" href="{% url 'projectapp:pricing' %}">Pricing</a></li>
+      <li class="nav-item mt-3">
+        <a href="{% url 'projectapp:orderFlow' %}" class="btn btn-primary w-100">Order Now</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--END NAVBAR-->
+
+<div class="about-section white-section" style="">
+  <div class="card sub-service-hero" style="background-image: url('{% static 'images/cover-other.jpg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container p-0">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-md-9 d-flex align-items-center">
+          <div class="card other-hero-card" style="max-width: 56rem;">
+            <div class="card-body">
+              <h5 class="about-hero-title" style="max-width: 55rem;">Data Processing Agreement </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="white-section ">
+    <div class="card service-section" style="background: #ffffff;">
+        <div class="container">
+            <div class="card-body p-0 card-body-1">
+                <div class="card about-1-card bg-transparent" style="">
+                    <div class="card-body p-0">
+                      <h4 class="title-101">VGDS Global LLP – Data Processing Agreement (DPA)</h4>
+
+                      <p class="text-102 fw-bolder">This Data Processing Agreement is entered into as an addendum to the Terms and Conditions Agreement by and between:</p>
+                      <p class="text-102 fw-bolder">Controller:</p>
+                        <p class="about-3-title">The Client
+                        </p>
+
+                      <p class="text-102 fw-bolder">Processor:</p>
+                        <p class="about-3-title">VGDS Global LLP
+                        </p>
+
+
+                      <p class="text-102 fw-bolder">I. PURPOSE</p>
+                        <p class="about-3-title">This Addendum outlines the obligations of the Processor (VGDS Global LLP) in relation to the handling, processing, and protection of personal and confidential data received from the Client (Controller) for the execution of the agreed services.
+                        </p>
+
+                      <p class="text-102 fw-bolder">II. SCOPE OF DATA PROCESSING</p>
+                        <p class="about-3-title">VGDS Global may process personal data solely for the purposes of executing the Client’s project. Data includes, but is not limited to:
+                        </p>
+
+                      <p class="about-3-title">- Client documents.</p>
+                      <p class="about-3-title">- Contact details.</p>
+                      <p class="about-3-title">- Any sensitive or identifiable information provided during the service period.</p>
+
+                       <p class="about-3-title">VGDS Global may process personal data solely for the purposes of executing the Client’s project. Data includes, but is not limited to:
+                        </p>
+
+                      <p class="about-3-title">VGDS Global shall</p>
+                      <p class="about-3-title">- Process data only on documented instructions from the Client.</p>
+                      <p class="about-3-title">- Not use the data for any purpose other than project completion.</p>
+
+                      <p class="text-102 fw-bolder">III. CONFIDENTIALITY AND SECURITY</p>
+
+                        <p class="about-3-title">VGDS Global agrees to:</p>
+                      <p class="about-3-title">- Ensure all staff and authorized personnel are bound by confidentiality agreements.</p>
+                      <p class="about-3-title">- Implement appropriate technical and organizational measures to safeguard data.</p>
+                      <p class="about-3-title">- Not share Client data with any unauthorized third party or internal team.</p>
+
+                      <p class="text-102 fw-bolder">IV. DATA DELETION</p>
+
+                        <p class="about-3-title">At the end of the service contract:</p>
+                      <p class="about-3-title">- All data provided by the Client will be permanently deleted from VGDS Global’s systems upon request or within the defined 30-day post-project retention period..</p>
+
+                       <p class="text-102 fw-bolder">V. SUB-PROCESSORS</p>
+
+                        <p class="about-3-title">VGDS Global shall not engage any third-party sub-processors without the prior written consent of the Client. Any approved sub-processors shall be bound by similar confidentiality and data protection obligations.</p>
+
+                      <p class="text-102 fw-bolder">VI. AUDIT RIGHTS</p>
+
+                        <p class="about-3-title">Upon request, VGDS Global shall provide evidence of compliance with this DPA and cooperate with any Client-initiated audits or inquiries, subject to reasonable notice and scope.</p>
+
+                       <p class="text-102 fw-bolder">VII. GOVERNING LAW</p>
+
+                        <p class="about-3-title">This Addendum shall be governed by the laws of the Republic of India. Any dispute shall be submitted to the jurisdiction of the courts located in Ernakulam, Kerala, India.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      {% endblock %}

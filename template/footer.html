@@ -1,0 +1,76 @@
+
+{% load static %}
+
+<div class="hr-line"></div>
+
+<footer class="white-section">
+    <div class="container">
+        <div class="card footer-card">
+            <div class="card-body p-0 card-body-1">
+                <div class="row row-cols-1 row-cols-md-4 g-2">
+                    <div class="col">
+                        <div class="card element-card" style="max-width: 16.75rem;">
+                          <img src="{% static 'images/vgds-logo-2.png' %}" class="footer-logo" alt="...">
+                          <div class="card-body p-0">
+                            <p class="card-text">
+                                <a href="https://x.com/VGDS_Global" class="social-links" target="_blank">
+                                    <img width="24" height="24" src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="twitterx--v2"/>
+                                </a>
+                                <a href="https://www.instagram.com/vgds.global_official/" class="social-links" target="_blank">
+                                     <img width="24" height="24" src="https://img.icons8.com/ios/50/instagram-new.png" alt="instagram-new"/>
+                                </a>
+                                <a href="https://youtube.com/@vgdsgloabl?si=scqOfb2EJQ4Rgsiq" class="social-links" target="_blank">
+                                    <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/youtube-play.png" alt="youtube-play"/>
+                                </a>
+                                <a href="https://www.linkedin.com/company/vgdsglobal/" class="social-links" target="_blank">
+                                    <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin"/>
+                                </a>
+
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card element-card" style="max-width: 16.75rem;">
+                          <div class="card-body p-0">
+                              <h5 class="nav-head">Our Services</h5>
+                              <a href="{% url 'projectapp:presentation_design' %}" class="footer-link">Presentation Design</a>
+                              <a href="{% url 'projectapp:graphics' %}" class="footer-link">Graphic Design</a>
+                              <a href="{% url 'projectapp:otherServices' %}" class="footer-link">Other Services</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card element-card" style="max-width: 16.75rem;">
+                          <div class="card element-card" style="max-width: 16.75rem;">
+                          <div class="card-body p-0">
+                              <h5 class="nav-head">Our Solutions</h5>
+                              <a href="{% url 'projectapp:solutions' %}#presentation-experts-on-demand" class="footer-link">Presentation Experts on Demand</a>
+                              <a href="{% url 'projectapp:solutions' %}#overnight-presentation" class="footer-link">Overnight Presentation</a>
+                              <a href="{% url 'projectapp:solutions' %}#dedicated-design-team-subscription" class="footer-link">Dedicated Design Team Subscription</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card element-card" style="max-width: 16.75rem;">
+                          <div class="card element-card" style="max-width: 16.75rem;">
+                          <div class="card-body p-0">
+                              <a href="mailto:info@vgdsglobal.com" class="footer-link" target="_blank"><img class="footer-contact" src="{% static 'icons/ic_baseline-email.svg' %}">info@vgdsglobal.com</a>
+                              <a href="tel:+917306857192" class="footer-link" target="_blank"><img class="footer-contact" src="{% static 'icons/basil_phone-solid.svg' %}">+91 7306857192</a>
+                              <a href="https://www.google.com/maps/place/VGDS+Global/@10.0172873,76.368723,21z/data=!4m14!1m7!3m6!1s0x3b080b7ed007dded:0x7eee5873d0758021!2sClovers+Safety+Services+Private+Limited!8m2!3d10.0172143!4d76.3687994!16s%2Fg%2F1vcjkpbp!3m5!1s0x3b0872ce8bc3f789:0x450b6f0ef7531fd8!8m2!3d10.0173734!4d76.3688223!16s%2Fg%2F11y6b1fbkw?hl=en-IN&entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"  target="_blank" class="footer-link"><img class="footer-contact" src="{% static 'icons/weui_location-filled.svg' %}">VGDS Global LLP, 1st floor, Clovers Blue Tower, Edachira Junction, Kakkanad, <br>Cochin-682030</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="hr-line"></div>
+
+<div class="white-section">
+    <div class="text-center bg-white py-3">2025 <span>&#169;</span> <a href="{% url 'projectapp:home' %}" class="noLink">VGDS</a> </div>
+</div>

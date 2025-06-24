@@ -1,0 +1,237 @@
+<div class="white-section">
+  <div class="card our-work-card">
+
+    <div class="container-fluid">
+      <!--Button Group-->
+      <div class="work-toggle mx-auto">
+        <button id="all" class="active">All</button>
+        <button id="brandingTemplates">Branding Templates</button>
+        <button id="brochure">Brochure</button>
+        <button id="businessPresentation">Business Presentation</button>
+        <button id="companyProfile">Company profile</button>
+        <button id="flyer">Flyer</button>
+        <button id="graphicDesign">Graphic Design</button>
+        <button id="pitchDeckDesign">Pitch Deck Design</button>
+        <button id="dataVisualization">Data Visualization</button>
+        <button id="salesDesign">Sales Design</button>
+      </div>
+    </div>
+
+    <!--All-->
+    <div class="work-section" id="allWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            <div class="col">
+              <div class="card work-card">
+                <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                <div class="card-body text-start p-0 mt-3">
+                  <h5 class="team-name">{{ work.title }}</h5>
+                  <div class="cat-div"><h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5></div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+      </div>
+    </div>
+
+    <!--Brochure-->
+    <div class="work-section" id="brochureWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "brochure" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <div class="cat-div"><h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5></div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--Branding Templates-->
+    <div class="work-section" id="brandingTemplatesWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "brandingTemplates" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <div class="cat-div"><h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5></div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--Business Presentation-->
+    <div class="work-section" id="businessPresentationWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "businessPresentation" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <div class="cat-div"><h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5></div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--companyProfile-->
+    <div class="work-section" id="companyProfileWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "companyProfile" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <div class="cat-div"><h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5></div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--flyer-->
+    <div class="work-section" id="flyerWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "flyer" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--graphicDesign-->
+    <div class="work-section" id="graphicDesignWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "graphicDesign" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--powerpoint-->
+    <div class="work-section" id="dataVisualizationWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "dataVisualization" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--salesDesign-->
+    <div class="work-section" id="salesDesignWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "salesDesign" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--pitchDeckDesign-->
+    <div class="work-section" id="pitchDeckDesignWorks">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for work in works %}
+            {% if work.category == "pitchDeckDesign" %}
+              <div class="col">
+                <div class="card work-card">
+                  <div class="work-img image-popup" style="background-image: url('{{ work.image.url }}');" data-image="{{ work.image.url }}"></div>
+                  <div class="card-body text-start p-0 mt-3">
+                    <h5 class="team-name">{{ work.title }}</h5>
+                    <h5 class="team-desc mt-0 mb-0">{{ work.get_category_display }}</h5>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Image Modal -->
+<div id="imageModal" class="modal-img-view d-none">
+  <img src="{% static 'icons/icons8-close.svg' %}" alt="Close" class="close-btn-svg">
+  <img class="modal-content-img" id="modalImage">
+</div>
+
+</div>
